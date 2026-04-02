@@ -1,12 +1,20 @@
 # Country Weather App 🌍🌦️
 
+Angular application that displays country details and real-time weather data.
+
 ## Features
-- Search countries
-- View country details
-- Weather information of capital city
+- Country list
+- Country details
+- Weather information
 
-## Tech
-Angular, REST Countries API, OpenWeatherMap API
+## Tech Stack
+- Angular
+- TypeScript
+- REST APIs
 
-## Run
+## Setup
+npm install
 ng serve
+
+
+
