@@ -1,0 +1,22 @@
+<div class="search-box">
+<input [(ngModel)]="searchText" (input)="search()" placeholder="Search country"  class="search">
+</div>
+<br>
+<br>
+<br>
+ 
+<div *ngIf="countries.length === 0">Loading...</div>
+<div class="cards">
+ 
+<div *ngFor="let c of filtered" class="card">
+  <img [src]="c.flags?.png" alt="flag">
+  <h3>{{ c.name.common }}</h3>
+  <p>{{ c.region }}</p>
+ 
+  
+  <button [routerLink]="['/country', c.name.common]">
+  View Details
+</button>
+</div>
+</div>
+ 

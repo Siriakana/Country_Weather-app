@@ -1,0 +1,34 @@
+
+<div class="detail-con">
+  <div class="detail-container" *ngIf="country">
+ 
+ 
+ 
+  <div class="detail-card">
+ 
+    <img [src]="country.flags.png" class="detail-flag">
+ 
+    <h2>{{ country.name.common }}</h2>
+ 
+    <p><b>Region:</b> {{ country.region }}</p>
+    <p><b>Capital:</b> {{ country.capital?.[0] }}</p>
+    <p><b>Population:</b> {{ country.population }}</p>
+    <p><b>Currency:</b> {{ currencyName }}</p>
+ 
+    <hr>
+ 
+    <div *ngIf="weather; else weatherLoading">
+      <h3>🌦 Weather</h3>
+      <p><b>Temperature:</b> {{ weather.main.temp }} °C</p>
+      <p><b>Condition:</b> {{ weather.weather[0].description }}</p>
+    </div>
+ 
+    <ng-template #weatherLoading>
+      <p>Loading weather...</p>
+    </ng-template>
+ 
+  </div>
+ 
+</div>
+ <button routerLink="/" class="back-btn">⬅ Back</button>
+</div>
