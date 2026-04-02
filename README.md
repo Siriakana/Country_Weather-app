@@ -1,4 +1,4 @@
-# Country Weather App 🌍🌦️
+# Country Weather App 
 
 Angular application that displays country details and real-time weather data.
 
